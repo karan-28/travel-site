@@ -15,4 +15,9 @@
             font-size: 1.25rem;
         }
     }
+
+    &--vertical{
+        display: block;
+        margin-bottom: 20px;
+    }
 }
