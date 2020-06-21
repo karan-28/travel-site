@@ -1,9 +1,48 @@
 .modal{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 0.3s ease-out;
     position: fixed;
     top:0;
-    bottom:0;
-    right:0;
-    left:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index:5;
     background-color: rgba(255, 255, 255, 0.94);
-    z-index: 5;
+    display: flex;
+
+    &--is-visible{
+        visibility: visible;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    &__inner{
+        flex:1;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    &__description{
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 300;
+        line-height: 1.65;
+    }
+
+    &__close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 2rem;
+        color: $mainBlue;
+        transform-origin: 100% 0;
+        cursor: pointer;
+        transform: scaleX(1.2);
+
+        &:hover{
+            color: $mainOrange;
+        }
+    }
 }
