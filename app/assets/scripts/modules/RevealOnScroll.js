@@ -20,7 +20,6 @@ class RevealOnScroll{
     }
 
     calcCaller(){
-        console.log("scroll ran");
         this.itemsToReveal.forEach( el => {
             if(el.isRevealed==false){
                 this.calculateIfScrolledTo(el);
@@ -31,7 +30,7 @@ class RevealOnScroll{
 
     calculateIfScrolledTo(el){
         if(window.scrollY + this.browserHeight > el.offsetTop){
-            console.log("Element was calculated");
+            
             let scrollPrecent = (el.getBoundingClientRect().y/this.browserHeight) *100;
     
             if(scrollPrecent < this.thresholdPercent){

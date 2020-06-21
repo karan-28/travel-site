@@ -49,9 +49,15 @@
         background-color: rgba($mainBlue, 0.5);
 
         @mixin atMedium{
+            
+            &.is-current-link{
+                color: #fabb69;
+            }
+
             padding: 12px 0;
             font-size: 1rem;
             background-color: transparent;
         }
     }
+
 }
